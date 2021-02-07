@@ -81,7 +81,19 @@ class Game{
             debugger;
             fruits=createSprite(random(100,1000),0,100,100);
             fruits.velocityY=6;
-         
+            var rand=Math.round(random(1,5));
+            switch(rand){
+                case 1:fruits.addImage("fruit1",fruit1_img);
+                break;
+                case 2:fruits.addImage("fruit2",fruit2_img);
+                break;
+                case 3:fruits.addImage("fruit3",fruit3_img);
+                break;
+                case 4:fruits.addImage("fruit4",fruit4_img);
+                break;
+                case 5:fruits.addImage("fruit5",fruit5_img);
+                break;
+            }
             fruitGroup.add(fruits);
         }
 
