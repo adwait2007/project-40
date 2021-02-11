@@ -36,9 +36,8 @@ class Game{
         }
     
     play(){
-        debugger;
         form.hide();
-         debugger;
+
         Player.getPlayerInfo();
         image(back_img, 0, 0, 1000, 800);
         var x =100;
@@ -46,7 +45,7 @@ class Game{
         var index =0;
 
         for(var plr in allPlayers){
-            debugger;
+
             index = index+1;
             x = 500-allPlayers[plr].distance;
             y=500;
@@ -54,31 +53,24 @@ class Game{
             players[index -1].x = x;
             players[index - 1].y = y;
 
-         if(index===player.index){
-             debugger;
-             fill("black");
-             textSize(25);
-             text(allPlayers[plr].name,x-25,x+25);
-         }
-
         }
 
 
         if(keyIsDown(RIGHT_ARROW)&&player.index!==null){
-            debugger;
+
             player.distance-=10;
             player.update();
         }
 
         if(keyIsDown(LEFT_ARROW)&&player.index!==null){
-            debugger;
+
             player.distance+=10;
             player.update();
         }
 
 
-        if(frameCount%20===20){
-            debugger;
+        if(frameCount%20===0){
+
             fruits=createSprite(random(100,1000),0,100,100);
             fruits.velocityY=6;
             var rand=Math.round(random(1,5));
